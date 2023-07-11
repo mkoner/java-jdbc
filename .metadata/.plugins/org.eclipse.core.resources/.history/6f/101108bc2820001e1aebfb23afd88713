@@ -10,8 +10,8 @@ public class Demo {
 		
 		String query = "SELECT name FROM users where id=1";
 		String query1 = "SELECT * FROM users";
-		String query2 = "insert into users values(3, 'Ibrahim')";
-		//String query2 = "delete from users where id=3";
+		//String query2 = "insert into users values(3, 'Ibrahim')";
+		String query2 = "delete from users where id=3";
 		
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, user, password);
