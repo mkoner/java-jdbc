@@ -35,16 +35,7 @@ public class Demo {
 		}
 		*/
 		
-		/*
-		 //quuery2
 		int affectedRows = st.executeUpdate(query2);
-		System.out.println(affectedRows + "row(s) affected");
-		*/
-		
-		int userId = 6;
-		String username = "Aisha";
-		String query3 = "insert into users values(" + userId + ", '" + username + "')" ;
-		int affectedRows = st.executeUpdate(query3);
 		System.out.println(affectedRows + "row(s) affected");
 		
 	}
