@@ -55,7 +55,7 @@ public class Demo {
 		PreparedStatement ps = con.prepareStatement(query4);
 		ps.setInt(1, userId);
 		ps.setString(2, username);
-		int affectedRows = ps.executeUpdate();
+		int affectedRows = st.executeUpdate(query4);
 		System.out.println(affectedRows + "row(s) affected");
 		
 	}
