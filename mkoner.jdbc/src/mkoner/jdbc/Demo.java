@@ -4,6 +4,7 @@ import java.sql.*;
 public class Demo {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		/*
 		String url = "jdbc:mysql://localhost:3306/jdbc";
 		String user = "root";
 		String password = "P@ss12345";
@@ -16,6 +17,7 @@ public class Demo {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, user, password);
 		Statement st = con.createStatement();
+		*/
 		
 		/*
 		 //query
@@ -49,6 +51,7 @@ public class Demo {
 		System.out.println(affectedRows + "row(s) affected");
 		*/
 		
+		/*
 		int userId = 7;
 		String username = "Jane";
 		String query4 = "insert into users values(?,?)" ;
@@ -57,6 +60,20 @@ public class Demo {
 		ps.setString(2, username);
 		int affectedRows = ps.executeUpdate();
 		System.out.println(affectedRows + "row(s) affected");
+		
+		*/
+		
+		Dao dao = new Dao();
+		dao.connect();
+		//dao.getUser(1);
+		System.out.println(dao.getUser(1));
+		
+		User user = new User(8, "Fatima");
+		dao.connect();
+		System.out.println(dao.addUser(user) + "row(s) affected");
+		
+		dao.closeConnection();
+		
 		
 	}
 
